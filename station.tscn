@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqw3e0psa4njt"]
+
+[ext_resource type="Script" uid="uid://cq6uduqwulr0g" path="res://character_body_2d.gd" id="1_sum1q"]
+[ext_resource type="Texture2D" uid="uid://cxlx2q2t5dx4n" path="res://characters/shambling-zombie.svg" id="1_xmj61"]
+[ext_resource type="Texture2D" uid="uid://beobcqve0osff" path="res://characters/brick-wall.svg" id="2_sum1q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oblqs"]
+size = Vector2(266, 249)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7ugr"]
+size = Vector2(2637.5, 147)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(391, 304)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-89, 38)
+rotation = -0.171319
+script = ExtResource("1_sum1q")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-135.905, -35.6918)
+scale = Vector2(0.494141, 0.484375)
+texture = ExtResource("1_xmj61")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-137.194, -39.9742)
+shape = SubResource("RectangleShape2D_oblqs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-227, 228)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1188, 25)
+scale = Vector2(5.11914, 0.271484)
+texture = ExtResource("2_sum1q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1196, 28)
+shape = SubResource("RectangleShape2D_k7ugr")
